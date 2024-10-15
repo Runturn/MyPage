@@ -22,7 +22,7 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Lab Homepage: "https://sulab-sever.u-aizu.ac.jp/"
     - Learn markdown: "https://www.markdowntutorial.com/"
   University of Aizu: "https://u-aizu.ac.jp/"
 
@@ -50,13 +50,13 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "return2000@qq.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: deanattali
-  github: daattali
-  twitter: daattali
+  github: Runturn
+#  twitter: daattali
   patreon: DeanAttali
-  youtube: "@daattali"
+#  youtube: "@daattali"
   whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
