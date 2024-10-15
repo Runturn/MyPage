@@ -1,7 +1,8 @@
 ---
 layout: page
 title: About me
-subtitle: 今生の出会いは前世の擦れ違い  Konsei no deai wa zensei no surechigai
+subtitle: 今生の出会いは前世の擦れ違い
+subtitle: Konsei no deai wa zensei no surechigai
 cover-img: /assets/img/path.jpg
 ---
 
@@ -11,7 +12,7 @@ My name is HE Runtong. I graduated with a Bachelor’s degree from Wuhan Univers
 - Height: 182cm
 - Weight：It's always changing. It's a secret to me, too.
 - Language：Chinese，English，Japanese
-- Hobbies: Reading in my free time
+- Hobbies: Reading
 
 
 ### My story
