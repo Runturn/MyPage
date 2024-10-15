@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why don't you become friends with me?
+subtitle: 今生の出会いは前世の擦れ違い  Konsei no deai wa zensei no surechigai
 cover-img: /assets/img/path.jpg
 ---
 
