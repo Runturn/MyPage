@@ -11,7 +11,7 @@ My name is HE Runtong. I graduated with a Bachelor’s degree from Wuhan Univers
 - Height: 182cm
 - Weight：It's always changing. It's a secret to me, too.
 - Language：Chinese，English，Japanese
-
+- Hobbies: Reading in my free time
 
 
 ### My story
