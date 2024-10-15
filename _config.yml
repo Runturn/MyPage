@@ -28,8 +28,9 @@ navbar-links:
     - Dive into Deep Learning: "https://github.com/d2l-ai/d2l-zh/"
     - CS-Books: "https://github.com/forthespada/CS-Books/"
   Affiliation:
-    - Lab Homepage: "https://sulab-sever.u-aizu.ac.jp/"
     - University of Aizu: "https://u-aizu.ac.jp/"
+    - Lab Homepage: "https://sulab-sever.u-aizu.ac.jp/"
+    
   
 
 ################
@@ -70,9 +71,9 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
+  instagram: run.tong
+  spotify: RUNTONG HE
+#  telephone:
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
