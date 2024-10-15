@@ -1,20 +1,27 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Why don't you become friends with me?
 cover-img: /assets/img/path.jpg
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is HE Runtong. I graduated with a Bachelor’s degree from Wuhan University of Science and Technology. Currently, I am pursuing a Master’s degree at the Graduate School of Computer Science and Engineering at the University of Aizu.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- Date of Birth: 2000/06/24
+- Height: 182cm
+- Weight：It's always changing. It's a secret to me, too.
+- Language：Chinese，English，Japanese
 
-What else do you need?
+
 
 ### My story
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I lived in a small county in northeastern China until I turned 18.  ![image](/assets/img/The path home from school.jpg)
 
-![image](/assets/img/path.jpg)
+The train ride from home to university covered over 2,000 kilometers, and I spent the entire journey gazing into the future.  ![image](/assets/img/Changjiang.jpg)
 
+Perhaps now is the time to start turning that vision into reality.
+
+![image](/assets/img/Snowing.jpg)
+
+Even though the roads turn muddy on snowy days, the crisp and refreshing air makes it all worthwhile. There's a unique charm in watching snowflakes dance through the sky, reminding me that every challenging path still offers moments of beauty and clarity.
