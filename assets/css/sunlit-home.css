@@ -302,9 +302,9 @@ body.sunlit-home {
 
 .sunlit-botanical-cursor.is-interactive::before {
   inset: -2px;
-  border-color: rgba(184, 148, 62, 0.92);
-  background: rgba(248, 242, 219, 0.32);
-  box-shadow: 0 2px 7px rgba(48, 58, 53, 0.12);
+  border-color: rgba(184, 148, 62, 0.48);
+  background: rgba(248, 242, 219, 0.2);
+  box-shadow: 0 2px 7px rgba(48, 58, 53, 0.08);
 }
 
 .sunlit-botanical-cursor.is-interactive {
