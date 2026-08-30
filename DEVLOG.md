@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-08-31 — Lighter leaf trail
+
+- Reduced leaf size from 11–23px to 7–13px and shortened drift distance and lifetime, so particles read as texture rather than foreground decoration.
+- Halved the active-particle cap from 48 to 24 and the per-movement burst from four leaves to two.
+- Increased the required pointer distance and time interval between emissions, leaving more open space around the minimal dot-and-ring cursor.
+
 ## 2026-08-30 — Minimal botanical pointer
 
 - Replaced the operating-system arrow on fine-pointer devices with a compact olive dot and thin gold ring, following SHAN-VERSE's restrained cursor scale without copying its star particles.
@@ -19,7 +25,7 @@
 
 - Added a site-wide mouse trail made from four Font Awesome botanical silhouettes rather than emoji or custom cursor artwork.
 - Varied leaf shape, scale, olive/gold tone, rotation, lateral drift, fall distance, and lifetime so the trail feels organic instead of stamped or repetitive.
-- Limited emission by pointer distance, time interval, and a 42-element cap; expired leaves remove themselves and clear when the page is hidden.
+- Limited emission by pointer distance, time interval, and an active-element cap; expired leaves remove themselves and clear when the page is hidden. The cap was tightened further in the 2026-08-31 density refinement.
 - Disabled the effect for coarse pointers and `prefers-reduced-motion`, while keeping every leaf non-interactive and hidden from assistive technology.
 
 ## 2026-08-30 — Post-graduation information architecture

@@ -76,9 +76,9 @@
     var lastX = null;
     var lastY = null;
     var lastSpawnTime = 0;
-    var maxLeaves = 48;
-    var minDistance = 9;
-    var minInterval = 22;
+    var maxLeaves = 24;
+    var minDistance = 16;
+    var minInterval = 38;
 
     function removeLeaf(leaf) {
       if (!leaf) return;
@@ -93,9 +93,9 @@
 
       var leaf = document.createElement("i");
       var iconIndex = Math.floor(Math.random() * leafIcons.length);
-      var size = 11 + Math.random() * 12;
-      var sideDrift = (Math.random() - 0.5) * 34;
-      var fall = 28 + Math.random() * 42;
+      var size = 7 + Math.random() * 6;
+      var sideDrift = (Math.random() - 0.5) * 24;
+      var fall = 20 + Math.random() * 30;
       var pathLength = Math.hypot(directionX, directionY) || 1;
       var normalX = -directionY / pathLength;
       var normalY = directionX / pathLength;
@@ -103,7 +103,7 @@
       var driftY = normalY * sideDrift * 0.3 + fall;
       var startRotation = Math.round(Math.random() * 120 - 60);
       var endRotation = startRotation + Math.round((Math.random() < 0.5 ? -1 : 1) * (90 + Math.random() * 210));
-      var duration = Math.round(1050 + Math.random() * 650);
+      var duration = Math.round(850 + Math.random() * 450);
 
       leaf.className = "sunlit-cursor-leaf " + leafIcons[iconIndex];
       leaf.setAttribute("aria-hidden", "true");
@@ -142,12 +142,12 @@
       var distance = Math.hypot(dx, dy);
       if (distance < minDistance || now - lastSpawnTime < minInterval) return;
 
-      var count = Math.min(4, Math.max(1, Math.floor(distance / 18)));
+      var count = Math.min(2, Math.max(1, Math.floor(distance / 34)));
       for (var index = 1; index <= count; index += 1) {
         var progress = index / count;
         createLeaf(
-          lastX + dx * progress + (Math.random() - 0.5) * 6,
-          lastY + dy * progress + (Math.random() - 0.5) * 6,
+          lastX + dx * progress + (Math.random() - 0.5) * 4,
+          lastY + dy * progress + (Math.random() - 0.5) * 4,
           dx,
           dy
         );

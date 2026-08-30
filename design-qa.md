@@ -119,17 +119,19 @@
 ## Minimal botanical pointer — 2026-08-30
 
 - Interactive-state evidence: `docs/qa/botanical-cursor-after.png` at 1280 × 720, with the compact pointer over the primary About button and its thin ring subtly expanded.
-- Default-state and trail evidence: `docs/qa/botanical-cursor-trail.png` at 1280 × 720, with the minimal olive-dot pointer over the road image and temporary leaves active along the movement path.
+- Default-state and trail evidence: `docs/qa/botanical-cursor-trail.png` at 1280 × 720, with the minimal olive-dot pointer over the road image and the lighter trail active along the movement path.
 - The page reports `data-botanical-cursor="active"`, mounts exactly one custom cursor, hides the native cursor, and toggles `is-interactive` over links and buttons.
 - The custom pointer is `aria-hidden`, `pointer-events: none`, and therefore cannot intercept clicks or enter the accessibility tree.
 - Homepage and Projects verification both produced one cursor instance and zero horizontal overflow; the existing leaf trail remains functional on the same pointer path.
 - Activation is guarded by `(hover: hover) and (pointer: fine)`, leaving touch/coarse-pointer devices on their native cursor path. Reduced-motion CSS collapses cursor transitions and the existing script skips leaf emission.
+- Density refinement on 2026-08-31 reduced the same five-point test path from 16 simultaneous leaves to 8; measured rendered sizes ranged from 7.1px to 12.7px, within the configured 7–13px range.
 
 ## Nature cursor trail — 2026-08-30
 
 - Baseline: `docs/qa/leaf-trail-before.png`, captured at 1280 × 720 with the pointer effect absent.
 - Implemented state: `docs/qa/leaf-trail-after.png`, captured at the same viewport after one continuous diagonal pointer path.
 - Same-input visual comparison confirms the trail remains legible across both the cream copy panel and the detailed road photograph without hiding navigation, buttons, or status content.
+- The original implementation capture is retained as historical evidence; `botanical-cursor-trail.png` is the current, lower-density state after the 2026-08-31 refinement.
 
 ### Trail findings and verification
 
