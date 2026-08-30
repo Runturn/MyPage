@@ -1,0 +1,25 @@
+---
+common-ext-css:
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  - "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
+common-css:
+  - "/assets/css/sunlit-home.css"
+  - "/assets/css/sunlit-content.css"
+common-js:
+  - "/assets/js/sunlit-home.js"
+---
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+{% include head.html %}
+
+<body class="sunlit-home sunlit-inner">
+  {% include gtm_body.html %}
+  <a class="sunlit-skip-link" href="#main-content">Skip to content</a>
+  {% include sunlit-header.html %}
+
+  {{ content }}
+
+  {% include sunlit-footer.html %}
+  {% include footer-scripts.html %}
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Design QA — Sunlit homepage
+# Design QA — Sunlit portfolio
 
 ## Comparison contract
 
@@ -39,5 +39,30 @@
 - Browser console check returned no warnings or errors.
 - Remaining P3 variance: the available road photograph and generated vine have different exact silhouettes from the flattened reference, while preserving its composition, warmth, density, and visual role.
 - No unresolved P0, P1, or P2 issues remain.
+
+## Full-site unification — 2026-08-30
+
+- Source visual: the existing sunlit homepage at `docs/qa/unified-reference-home.png` (1280 × 720).
+- Before-state evidence: `docs/qa/unified-before-about.png` and `docs/qa/unified-before-post.png`, showing the remaining Bootstrap-era header, hero, typography, and spacing.
+- After-state evidence: `docs/qa/unified-after-about-desktop.png`, `unified-after-post-desktop.png`, `unified-after-tags-desktop.png`, and `unified-after-404-desktop.png`, all captured at a 1280 × 720 viewport.
+- Responsive evidence: `docs/qa/unified-after-about-mobile.png` and `unified-after-home-mobile.png`, captured at 390 × 844.
+- Same-canvas comparison: `docs/qa/unified-comparison-style.png` places the homepage visual source beside the unified About hero; `unified-comparison-before-after.png` places the former and current About pages side by side.
+
+### Unification findings and fixes
+
+1. P1 — A reveal animation was attached to the entire long-form article. Because the element was taller than the viewport, its intersection threshold could not be reached and the content remained invisible. Removed the long-container reveal attribute and retained motion on bounded hero elements.
+2. P2 — About, post, tags, and 404 pages inherited the legacy Beautiful Jekyll header and Bootstrap visual system. Added shared sunlit header, footer, base, page, and post layouts using the homepage tokens and typography.
+3. P2 — The previous About page exposed low-value personal measurements and an outdated current-student statement. Replaced them with public portfolio material: journey, research, project, community, interests, and language context.
+4. P2 — Six desktop navigation links became crowded before the mobile breakpoint. Added an intermediate spacing rule, then verified the menu conversion and `aria-expanded` behavior at 390px.
+5. P2 — Homepage status and note rows did not represent the new portfolio. Updated them to cyber security, LLM security, network security, civil-to-computing journey, Vibe Coding research, and QuickScribe.
+
+### Full-site verification
+
+- Jekyll production build completes successfully.
+- Homepage, About, post, tags, and 404 routes load with complete images and zero horizontal overflow at 1280px.
+- Homepage and About have zero horizontal overflow at 390px; the About hero stacks cleanly and the homepage notes collapse to one column.
+- The mobile menu opens visibly and reports `aria-expanded="true"`.
+- Browser console check returned no warnings or errors.
+- The final side-by-side comparison preserves the homepage's paper texture, serif hierarchy, olive-and-gold palette, straight-edged image treatment, restrained rules, and spacious editorial rhythm across the inner pages.
 
 final result: passed

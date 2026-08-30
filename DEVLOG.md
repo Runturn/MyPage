@@ -11,3 +11,12 @@
 ### Responsive follow-up
 
 - Reflowed Recent Notes into a two-row tablet layout before its preview image can squeeze the text columns, then preserved the existing single-column mobile layout below 900px.
+
+## 2026-08-30 — Full-site visual and profile update
+
+- Extracted public-safe profile facts and selected individual photographs from the updated BACS presentation; omitted onboarding, employer-training, driver-license, and other short-lived personal details.
+- Added graduation, construction-site, JPHACKS, and paper imagery with descriptive local filenames and alt text.
+- Replaced the old Bootstrap-era About, post, tags, and 404 presentation with shared sunlit layouts, navigation, footer, typography, page heroes, and responsive behavior.
+- Rewrote About around the civil-engineering-to-cyber-security journey, accepted Vibe Coding research, collaborative intrusion-detection work, QuickScribe, student-community leadership, and broader interests.
+- Updated the homepage focus strip and note entries to match the new portfolio content; refreshed the first historical note without changing its original date.
+- Verified Jekyll build output, desktop and mobile overflow, image loading, navigation state, and browser console output. Fixed a long-container reveal regression found during visual QA.

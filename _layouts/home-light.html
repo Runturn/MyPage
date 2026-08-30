@@ -16,27 +16,7 @@ common-js:
 
   <a class="sunlit-skip-link" href="#main-content">Skip to content</a>
 
-  <header class="sunlit-header" data-enter="header">
-    <a class="sunlit-brand" href="{{ '/' | relative_url }}" aria-label="HE RUNTONG home">
-      <i class="fa-solid fa-diamond" aria-hidden="true"></i>
-      <span>HE RUNTONG</span>
-      <i class="fa-solid fa-diamond" aria-hidden="true"></i>
-    </a>
-
-    <button class="sunlit-menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sunlit-navigation">
-      <span>Menu</span>
-      <i class="fa-solid fa-bars" aria-hidden="true"></i>
-    </button>
-
-    <nav class="sunlit-nav" id="sunlit-navigation" aria-label="Primary navigation">
-      <a href="{{ '/aboutme' | relative_url }}">About</a>
-      <a href="{{ '/aboutme#my-story' | relative_url }}">Story</a>
-      <a href="#notes">Notes</a>
-      <a href="https://github.com/forthespada/CS-Books/">Resources</a>
-      <a href="https://shan-verse.com/">Friends</a>
-      <i class="fa-solid fa-diamond sunlit-nav-mark" aria-hidden="true"></i>
-    </nav>
-  </header>
+  {% include sunlit-header.html %}
 
   <main id="main-content">
     <section class="sunlit-hero" aria-labelledby="hero-title">
@@ -69,14 +49,14 @@ common-js:
           data-vine
         >
 
-        <div class="sunlit-status" data-enter="5" aria-label="Current status">
-          <span class="sunlit-status-label">NOW</span>
+        <div class="sunlit-status" data-enter="5" aria-label="Current focus">
+          <span class="sunlit-status-label">FOCUS</span>
           <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
-          <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>University of Aizu</span>
+          <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Cyber Security</span>
           <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
-          <span><i class="fa-solid fa-display" aria-hidden="true"></i>Computer Science</span>
+          <span><i class="fa-solid fa-code" aria-hidden="true"></i>LLM Security</span>
           <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
-          <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Aizuwakamatsu, Japan</span>
+          <span><i class="fa-solid fa-network-wired" aria-hidden="true"></i>Network Security</span>
         </div>
       </div>
 
@@ -94,43 +74,42 @@ common-js:
         </h2>
 
         <div class="sunlit-note-list">
-          {% assign first_post = site.posts | first %}
           <a
             class="sunlit-note-row"
-            href="{% if first_post %}{{ first_post.url | relative_url }}{% else %}{{ '/aboutme' | relative_url }}{% endif %}"
-            data-preview="{{ '/assets/img/path.jpg' | relative_url }}"
-            data-preview-alt="A sunlit road through a forest"
+            href="{{ '/aboutme#journey' | relative_url }}"
+            data-preview="{{ '/assets/img/runtong-construction-site.jpg' | relative_url }}"
+            data-preview-alt="Runtong during a civil engineering site placement"
             data-reveal
           >
-            <strong>Thinking in Systems, Building in Public</strong>
-            <span>Notes on learning in public, shipping small, and iterating with care.</span>
-            <time>{% if first_post %}{{ first_post.date | date: "%b %-d, %Y" }}{% else %}Now{% endif %}</time>
+            <strong>From Structures to Systems</strong>
+            <span>A journey from civil engineering and site work into computer science.</span>
+            <time>Journey</time>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
 
           <a
             class="sunlit-note-row"
-            href="{{ '/aboutme#my-story' | relative_url }}"
-            data-preview="{{ '/assets/img/Snowing.jpg' | relative_url }}"
-            data-preview-alt="A snowy evening in Aizuwakamatsu"
+            href="{{ '/aboutme#research' | relative_url }}"
+            data-preview="{{ '/assets/img/paper-vibe-coding.png' | relative_url }}"
+            data-preview-alt="First page of the Vibe Coding security paper"
             data-reveal
           >
-            <strong>Aizu in Winter: Stillness and Focus</strong>
-            <span>Reflections from a snowy day in Aizuwakamatsu.</span>
-            <time>Field note</time>
+            <strong>Assessing LLM-Generated Code</strong>
+            <span>Testing how security-oriented prompts change vulnerabilities in generated code.</span>
+            <time>Research</time>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
 
           <a
             class="sunlit-note-row"
-            href="{{ '/aboutme' | relative_url }}"
-            data-preview="{{ '/assets/img/Changjiang.jpg' | relative_url }}"
-            data-preview-alt="The Yangtze River seen from Wuhan"
+            href="{{ '/aboutme#projects' | relative_url }}"
+            data-preview="{{ '/assets/img/runtong-jphacks-2024.jpg' | relative_url }}"
+            data-preview-alt="Runtong presenting QuickScribe at JPHACKS 2024"
             data-reveal
           >
-            <strong>From Civil Engineering to Cyber Security</strong>
-            <span>One path, different structures, and a growing interest in safer systems.</span>
-            <time>Current path</time>
+            <strong>QuickScribe at JPHACKS 2024</strong>
+            <span>Turning handwritten mathematics into structured digital notation.</span>
+            <time>Project</time>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
@@ -138,7 +117,7 @@ common-js:
 
       <div class="sunlit-note-preview" data-reveal>
         <div class="sunlit-preview-frame">
-          <img src="{{ '/assets/img/Snowing.jpg' | relative_url }}" alt="A snowy evening in Aizuwakamatsu" data-note-preview>
+          <img src="{{ '/assets/img/runtong-jphacks-2024.jpg' | relative_url }}" alt="Runtong presenting QuickScribe at JPHACKS 2024" data-note-preview>
         </div>
         <img
           class="sunlit-vine sunlit-vine-notes"
@@ -150,10 +129,7 @@ common-js:
     </section>
   </main>
 
-  <footer class="sunlit-footer">
-    <span>© {{ site.time | date: '%Y' }} HE RUNTONG</span>
-    <a href="https://shan-verse.com/">A neighboring light in SHAN-VERSE</a>
-  </footer>
+  {% include sunlit-footer.html %}
 
   {% include footer-scripts.html %}
 </body>
