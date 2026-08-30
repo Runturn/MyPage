@@ -14,6 +14,56 @@
   var revealNodes = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
   var frameRequested = false;
 
+  function setupBotanicalCursor() {
+    var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!finePointer.matches) return;
+
+    var cursor = document.createElement("span");
+    var cursorIcon = document.createElement("i");
+    var interactiveSelector = "a, button, [role='button'], input[type='button'], input[type='submit'], summary, label[for]";
+
+    cursor.className = "sunlit-botanical-cursor";
+    cursor.setAttribute("aria-hidden", "true");
+    cursorIcon.className = "fa-solid fa-seedling";
+    cursor.appendChild(cursorIcon);
+    body.appendChild(cursor);
+    root.dataset.botanicalCursor = "active";
+
+    function supportsPointer(event) {
+      return !event.pointerType || event.pointerType === "mouse" || event.pointerType === "pen";
+    }
+
+    function showAtPointer(event) {
+      if (!supportsPointer(event)) return;
+
+      cursor.style.setProperty("--cursor-x", event.clientX.toFixed(1) + "px");
+      cursor.style.setProperty("--cursor-y", event.clientY.toFixed(1) + "px");
+      cursor.classList.add("is-visible");
+      cursor.classList.toggle(
+        "is-interactive",
+        Boolean(event.target instanceof Element && event.target.closest(interactiveSelector))
+      );
+    }
+
+    function hideCursor() {
+      cursor.classList.remove("is-visible", "is-interactive", "is-pressed");
+    }
+
+    document.addEventListener("pointermove", showAtPointer, { passive: true });
+    document.addEventListener("pointerdown", function (event) {
+      if (supportsPointer(event)) cursor.classList.add("is-pressed");
+    }, { passive: true });
+    document.addEventListener("pointerup", function () {
+      cursor.classList.remove("is-pressed");
+    }, { passive: true });
+    document.addEventListener("pointercancel", hideCursor, { passive: true });
+    document.addEventListener("pointerleave", hideCursor, { passive: true });
+    window.addEventListener("blur", hideCursor);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") hideCursor();
+    });
+  }
+
   function setupLeafTrail() {
     var finePointer = window.matchMedia("(pointer: fine)");
     if (reducedMotion || !finePointer.matches) return;
@@ -126,6 +176,7 @@
   }
 
   root.classList.add("motion-ready");
+  setupBotanicalCursor();
   setupLeafTrail();
   window.requestAnimationFrame(function () {
     root.classList.add("is-ready");

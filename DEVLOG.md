@@ -1,5 +1,13 @@
 # Development Log
 
+## 2026-08-30 — Botanical custom pointer
+
+- Replaced the operating-system arrow on fine-pointer devices with a site-owned botanical cursor: an olive seedling inside an asymmetric leaf-shaped cream-and-gold badge.
+- Added a larger circular bloom state for links and buttons plus a compact pressed state, while keeping the click hotspot centred and the cursor responsive without smoothing lag.
+- Kept the existing varied-leaf trail, so the persistent pointer and the temporary particles now read as one interaction system rather than two unrelated effects.
+- Activates only after the custom cursor is mounted and only for devices reporting both hover and a fine pointer; touch/coarse-pointer devices retain their native behavior.
+- Kept the cursor non-interactive and hidden from assistive technology, with reduced-motion rules collapsing its decorative transitions and disabling the leaf trail.
+
 ## 2026-08-30 — Privacy-first photography
 
 - Removed all identifiable face photographs from the live site and replaced them with landscapes, botanical imagery, and publication material already present in the project.
