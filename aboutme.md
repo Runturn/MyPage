@@ -3,8 +3,8 @@ layout: page
 title: About
 kicker: IN BRIEF
 subtitle: A quiet builder, moving from physical structures toward safer digital systems.
-cover-img: /assets/img/runtong-graduation-aizu.jpg
-cover-alt: Runtong standing beside the University of Aizu graduation sign
+cover-img: /assets/img/Changjiang.jpg
+cover-alt: Evening light across the Yangtze River and Wuhan skyline
 share-description: About HE Runtong — education, work, research interests, skills, and life beyond work.
 ---
 

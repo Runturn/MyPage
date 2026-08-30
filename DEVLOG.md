@@ -1,5 +1,12 @@
 # Development Log
 
+## 2026-08-30 — Privacy-first photography
+
+- Removed all identifiable face photographs from the live site and replaced them with landscapes, botanical imagery, and publication material already present in the project.
+- Removed portrait-dependent metadata, captions, preview states, and visual-regression captures so the repository no longer needs a personal headshot or event photograph.
+- Adopted a faceless-image default for future updates: prefer nature, places, objects, work samples, and abstract details unless an identifiable portrait is deliberately approved.
+- Rewrote local Git history to remove the original face-photo blobs and screenshots that embedded them; remote history remains a separate publication decision.
+
 ## 2026-08-30 — Nature cursor trail
 
 - Added a site-wide mouse trail made from four Font Awesome botanical silhouettes rather than emoji or custom cursor artwork.
@@ -29,8 +36,8 @@
 
 ## 2026-08-30 — Full-site visual and profile update
 
-- Extracted public-safe profile facts and selected individual photographs from the updated BACS presentation; omitted onboarding, employer-training, driver-license, and other short-lived personal details.
-- Added graduation, construction-site, JPHACKS, and paper imagery with descriptive local filenames and alt text.
+- Extracted public-safe profile facts from the updated BACS presentation; omitted onboarding, employer-training, driver-license, and other short-lived personal details.
+- Added portfolio and paper imagery with descriptive local filenames and alt text; identifiable portraits were later removed under the privacy-first photography policy.
 - Replaced the old Bootstrap-era About, post, tags, and 404 presentation with shared sunlit layouts, navigation, footer, typography, page heroes, and responsive behavior.
 - Rewrote About around the civil-engineering-to-cyber-security journey, accepted Vibe Coding research, collaborative intrusion-detection work, QuickScribe, student-community leadership, and broader interests.
 - Updated the homepage focus strip and note entries to match the new portfolio content; refreshed the first historical note without changing its original date.

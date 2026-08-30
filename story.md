@@ -3,8 +3,8 @@ layout: page
 title: Story
 kicker: A PUBLIC OUTLINE
 subtitle: A few turning points — enough to show the path, without mapping every private step.
-cover-img: /assets/img/runtong-construction-site.jpg
-cover-alt: Runtong wearing a safety helmet during a construction placement
+cover-img: /assets/img/The path home from school.jpg
+cover-alt: A quiet snow-covered path illuminated at night
 share-description: A privacy-conscious timeline of HE Runtong's education, projects, research, and work.
 ---
 

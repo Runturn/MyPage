@@ -43,10 +43,8 @@
 ## Full-site unification — 2026-08-30
 
 - Source visual: the existing sunlit homepage at `docs/qa/unified-reference-home.png` (1280 × 720).
-- Before-state evidence: `docs/qa/unified-before-about.png` and `docs/qa/unified-before-post.png`, showing the remaining Bootstrap-era header, hero, typography, and spacing.
-- After-state evidence: `docs/qa/unified-after-about-desktop.png`, `unified-after-post-desktop.png`, `unified-after-tags-desktop.png`, and `unified-after-404-desktop.png`, all captured at a 1280 × 720 viewport.
-- Responsive evidence: `docs/qa/unified-after-about-mobile.png` and `unified-after-home-mobile.png`, captured at 390 × 844.
-- Same-canvas comparison: `docs/qa/unified-comparison-style.png` places the homepage visual source beside the unified About hero; `unified-comparison-before-after.png` places the former and current About pages side by side.
+- Preserved faceless after-state evidence: `unified-after-post-desktop.png`, `unified-after-tags-desktop.png`, and `unified-after-404-desktop.png`, all captured at a 1280 × 720 viewport, plus `unified-after-home-mobile.png` at 390 × 844.
+- Privacy note: earlier About before/after captures embedded identifiable photography. They were removed from the repository and its local history rather than retained as historical QA evidence.
 
 ### Unification findings and fixes
 
@@ -88,7 +86,7 @@
 ## Post-graduation content architecture — 2026-08-30
 
 - Visual sources: `docs/qa/reference-shan-about.png`, `reference-shan-projects.png`, `reference-shan-blog.png`, and `reference-shan-timeline.png`, each captured from the matching SHAN-VERSE route at a 1280 × 720 viewport.
-- Matched implementation states: `postgrad-about-viewport.png`, `postgrad-projects-viewport.png`, `postgrad-notes-viewport.png`, and `postgrad-story-viewport.png` at the same viewport and initial page state.
+- Matched implementation states retained here use only faceless imagery. Earlier About, Projects, and Story hero captures containing identifiable people were removed under the privacy-first photography policy.
 - Below-fold desktop evidence: `postgrad-projects-content-viewport.png`, `postgrad-story-content-viewport.png`, `postgrad-notes-content-viewport.png`, and `postgrad-connections-content-viewport.png`.
 - Responsive evidence: 390 × 844 captures for the Projects hero and publication content, About experience section, Story rail, Notes list, Connections cards, and open mobile menu.
 
@@ -108,6 +106,15 @@
 - Long publication titles, external-link controls, the privacy timeline, note cards, and connection cards remain contained at 1280 × 720 and 390 × 844.
 - The mobile menu opens visibly and reports `aria-expanded="true"`; the browser console reports no warnings or errors.
 - No unresolved P0, P1, or P2 visual or interaction issues remain.
+
+## Privacy-first photography — 2026-08-30
+
+- Desktop evidence: `docs/qa/privacy-about-desktop.png`, `privacy-story-desktop.png`, and `privacy-projects-desktop.png` at 1280 × 720.
+- Responsive evidence: `docs/qa/privacy-about-mobile.png` and `privacy-projects-mobile.png` at 390 × 844.
+- The About, Story, and Projects heroes now use Wuhan landscape, snowy path, and botanical seedling imagery respectively; no identifiable face is present in any current page asset or retained QA capture.
+- Homepage preview states use the same faceless image set, while publication previews continue to use the paper image.
+- All five replacement captures were checked for complete image loading, contained layout, and zero horizontal document overflow.
+- Every replacement image completed loading with a non-zero natural size; no failed image resource was observed.
 
 ## Nature cursor trail — 2026-08-30
 

@@ -3,8 +3,8 @@ layout: page
 title: Projects
 kicker: RESEARCH AND BUILT WORK
 subtitle: Work that turns questions into evidence, and ideas into something people can try.
-cover-img: /assets/img/runtong-jphacks-2024.jpg
-cover-alt: Runtong presenting QuickScribe at JPHACKS 2024
+cover-img: /assets/img/thumb.png
+cover-alt: A green seedling emerging through dry soil
 share-description: Publications and selected projects by HE Runtong.
 ---
 
@@ -57,8 +57,8 @@ share-description: Publications and selected projects by HE Runtong.
 
   <article class="sunlit-built-card">
     <figure>
-      <img src="{{ '/assets/img/runtong-jphacks-2024.jpg' | relative_url }}" alt="Runtong presenting QuickScribe at JPHACKS 2024">
-      <figcaption>JPHACKS 2024 · Sendai</figcaption>
+      <img src="{{ '/assets/img/thumb.png' | relative_url }}" alt="A green seedling symbolising an idea becoming a working prototype">
+      <figcaption>From an idea to a working prototype</figcaption>
     </figure>
     <div>
       <p class="sunlit-eyebrow">AUDIENCE VOTE · 3RD PLACE</p>
