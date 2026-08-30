@@ -1,5 +1,10 @@
 # Development Log
 
+## 2026-08-31 — Balanced homepage actions
+
+- Matched the About Me and Read Notes hero buttons to the same light, outlined default treatment so neither action appears preselected.
+- Preserved their shared dark-green hover and keyboard-focus state as the interaction cue.
+
 ## 2026-08-31 — Clearer clickable cursor state
 
 - Kept the accepted compact olive-and-gold cursor palette and 18px base footprint.
