@@ -20,3 +20,9 @@
 - Rewrote About around the civil-engineering-to-cyber-security journey, accepted Vibe Coding research, collaborative intrusion-detection work, QuickScribe, student-community leadership, and broader interests.
 - Updated the homepage focus strip and note entries to match the new portfolio content; refreshed the first historical note without changing its original date.
 - Verified Jekyll build output, desktop and mobile overflow, image loading, navigation state, and browser console output. Fixed a long-container reveal regression found during visual QA.
+
+## 2026-08-30 — Hero vine and motion annotation
+
+- Shifted the desktop botanical vine fully into the text panel so the image split no longer clips its right side; reduced the mobile edge offset as well.
+- Expanded pointer parallax from the road image alone to the full hero, allowing the title, buttons, status strip, and image regions to drive the same coordinated motion.
+- Verified opposite-direction pointer response across both hero halves, zero horizontal overflow at desktop/comment/mobile viewports, and a clean browser console.

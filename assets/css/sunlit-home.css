@@ -254,7 +254,7 @@ body.sunlit-home {
 .sunlit-vine-hero {
   position: absolute;
   z-index: 1;
-  right: -12%;
+  right: 2.5%;
   bottom: 72px;
   width: min(30vw, 420px);
   height: 560px;
@@ -637,7 +637,7 @@ body.sunlit-home {
   }
 
   .sunlit-vine-hero {
-    right: -60px;
+    right: -24px;
     width: 360px;
     opacity: 0.36;
   }

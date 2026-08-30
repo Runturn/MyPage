@@ -6,7 +6,7 @@
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var header = document.querySelector(".sunlit-header");
   var menuToggle = document.querySelector(".sunlit-menu-toggle");
-  var heroStage = document.querySelector("[data-parallax-stage]");
+  var heroStage = document.querySelector("[data-parallax-root]") || document.querySelector("[data-parallax-stage]");
   var heroImage = document.querySelector("[data-parallax-image]");
   var heroVine = document.querySelector("[data-vine]");
   var notePreview = document.querySelector("[data-note-preview]");

@@ -65,4 +65,24 @@
 - Browser console check returned no warnings or errors.
 - The final side-by-side comparison preserves the homepage's paper texture, serif hierarchy, olive-and-gold palette, straight-edged image treatment, restrained rules, and spacious editorial rhythm across the inner pages.
 
+## Browser annotation follow-up — vine position and pointer range
+
+- Source visual truth: `docs/qa/vine-motion-before-1280.png` (1280 × 720), captured before the annotation change.
+- Rendered implementation: `docs/qa/vine-motion-after-1280.png` (1280 × 720), captured after the change at the same viewport, page state, and device density.
+- Full-view comparison: `docs/qa/vine-motion-comparison.png` places both captures on the same canvas; no focused crop was needed because the affected vine and full hero interaction region are clearly visible at this scale.
+- Supplemental comment-viewport evidence: `docs/qa/vine-motion-after-1921.png` at 1921 × 1066.
+
+### Finding, fix, and post-fix evidence
+
+1. P2 — The hero vine extended 81.9px beyond the copy panel at 1280px and was clipped at the image boundary. Changed its desktop inset from `right: -12%` to `right: 2.5%`; the post-fix vine ends 16.7px before the panel edge at 1280px and 25.0px before it at 1921px.
+2. P2 — Pointer parallax listened only on the road-image figure, so the left half of the hero felt inert. Moved the interaction root to the entire `.sunlit-hero`; pointer tests in the left and right halves now produce opposite vine rotation and image translation values.
+3. P3 — The small-screen vine was still excessively offset from the right edge. Tightened the decorative mobile offset from `-60px` to `-24px` while preserving clipping containment and zero document overflow.
+
+### Annotation verification
+
+- Typography, spacing, palette, image crop, and copy remain unchanged from the accepted homepage.
+- Zero horizontal document overflow at 1280 × 720, 1921 × 1066, and 390 × 844.
+- At 1280px, moving the pointer over the left copy panel sets `--vine-x: -3.4px` and `--image-x: 4.2px`; moving it over the right image sets `--vine-x: 3.4px` and `--image-x: -4.2px`.
+- Browser console check returned no warnings or errors.
+
 final result: passed
