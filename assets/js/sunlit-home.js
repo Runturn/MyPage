@@ -14,7 +14,119 @@
   var revealNodes = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
   var frameRequested = false;
 
+  function setupLeafTrail() {
+    var finePointer = window.matchMedia("(pointer: fine)");
+    if (reducedMotion || !finePointer.matches) return;
+
+    var leafIcons = [
+      "fa-solid fa-leaf",
+      "fa-solid fa-seedling",
+      "fa-solid fa-clover",
+      "fa-solid fa-spa"
+    ];
+    var leafColors = ["#70885b", "#8ca36b", "#a6b47a", "#b8943e", "#5e754d"];
+    var activeLeaves = new Set();
+    var lastX = null;
+    var lastY = null;
+    var lastSpawnTime = 0;
+    var maxLeaves = 48;
+    var minDistance = 9;
+    var minInterval = 22;
+
+    function removeLeaf(leaf) {
+      if (!leaf) return;
+      activeLeaves.delete(leaf);
+      leaf.remove();
+    }
+
+    function createLeaf(x, y, directionX, directionY) {
+      if (activeLeaves.size >= maxLeaves) {
+        removeLeaf(activeLeaves.values().next().value);
+      }
+
+      var leaf = document.createElement("i");
+      var iconIndex = Math.floor(Math.random() * leafIcons.length);
+      var size = 11 + Math.random() * 12;
+      var sideDrift = (Math.random() - 0.5) * 34;
+      var fall = 28 + Math.random() * 42;
+      var pathLength = Math.hypot(directionX, directionY) || 1;
+      var normalX = -directionY / pathLength;
+      var normalY = directionX / pathLength;
+      var driftX = normalX * sideDrift - directionX * 0.08;
+      var driftY = normalY * sideDrift * 0.3 + fall;
+      var startRotation = Math.round(Math.random() * 120 - 60);
+      var endRotation = startRotation + Math.round((Math.random() < 0.5 ? -1 : 1) * (90 + Math.random() * 210));
+      var duration = Math.round(1050 + Math.random() * 650);
+
+      leaf.className = "sunlit-cursor-leaf " + leafIcons[iconIndex];
+      leaf.setAttribute("aria-hidden", "true");
+      leaf.dataset.leafShape = String(iconIndex + 1);
+      leaf.style.left = x.toFixed(1) + "px";
+      leaf.style.top = y.toFixed(1) + "px";
+      leaf.style.fontSize = size.toFixed(1) + "px";
+      leaf.style.color = leafColors[Math.floor(Math.random() * leafColors.length)];
+      leaf.style.setProperty("--leaf-drift-x", driftX.toFixed(1) + "px");
+      leaf.style.setProperty("--leaf-drift-y", driftY.toFixed(1) + "px");
+      leaf.style.setProperty("--leaf-drift-x-mid", (driftX * 0.42).toFixed(1) + "px");
+      leaf.style.setProperty("--leaf-drift-y-mid", (driftY * 0.34).toFixed(1) + "px");
+      leaf.style.setProperty("--leaf-rotate-start", startRotation + "deg");
+      leaf.style.setProperty("--leaf-rotate-mid", Math.round((startRotation + endRotation) / 2) + "deg");
+      leaf.style.setProperty("--leaf-rotate-end", endRotation + "deg");
+      leaf.style.setProperty("--leaf-duration", duration + "ms");
+
+      document.body.appendChild(leaf);
+      activeLeaves.add(leaf);
+      leaf.addEventListener("animationend", function () { removeLeaf(leaf); }, { once: true });
+      window.setTimeout(function () { removeLeaf(leaf); }, duration + 120);
+    }
+
+    function spawnAlongPath(event) {
+      if (event.pointerType && event.pointerType !== "mouse" && event.pointerType !== "pen") return;
+
+      var now = performance.now();
+      if (lastX === null || lastY === null) {
+        lastX = event.clientX;
+        lastY = event.clientY;
+        return;
+      }
+
+      var dx = event.clientX - lastX;
+      var dy = event.clientY - lastY;
+      var distance = Math.hypot(dx, dy);
+      if (distance < minDistance || now - lastSpawnTime < minInterval) return;
+
+      var count = Math.min(4, Math.max(1, Math.floor(distance / 18)));
+      for (var index = 1; index <= count; index += 1) {
+        var progress = index / count;
+        createLeaf(
+          lastX + dx * progress + (Math.random() - 0.5) * 6,
+          lastY + dy * progress + (Math.random() - 0.5) * 6,
+          dx,
+          dy
+        );
+      }
+
+      lastX = event.clientX;
+      lastY = event.clientY;
+      lastSpawnTime = now;
+    }
+
+    document.documentElement.dataset.leafTrail = "active";
+    document.addEventListener("pointermove", spawnAlongPath, { passive: true });
+    document.addEventListener("pointerleave", function () {
+      lastX = null;
+      lastY = null;
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState !== "hidden") return;
+      activeLeaves.forEach(removeLeaf);
+      lastX = null;
+      lastY = null;
+    });
+  }
+
   root.classList.add("motion-ready");
+  setupLeafTrail();
   window.requestAnimationFrame(function () {
     root.classList.add("is-ready");
     body.classList.add("is-ready");

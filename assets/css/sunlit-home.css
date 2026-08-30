@@ -251,6 +251,23 @@ body.sunlit-home {
   user-select: none;
 }
 
+.sunlit-cursor-leaf {
+  position: fixed;
+  z-index: 90;
+  display: block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  filter: drop-shadow(0 2px 2px rgba(48, 58, 53, 0.12));
+  transform: translate(-50%, -50%) rotate(var(--leaf-rotate-start)) scale(0.42);
+  transform-origin: 52% 58%;
+  will-change: transform, opacity;
+  animation: sunlit-leaf-trail var(--leaf-duration) cubic-bezier(.2,.68,.24,1) forwards;
+}
+
 .sunlit-vine-hero {
   position: absolute;
   z-index: 1;
@@ -508,6 +525,24 @@ body.sunlit-home {
   to { rotate: 1.1deg; }
 }
 
+@keyframes sunlit-leaf-trail {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--leaf-rotate-start)) scale(0.42);
+  }
+  16% {
+    opacity: 0.88;
+  }
+  48% {
+    opacity: 0.72;
+    transform: translate(calc(-50% + var(--leaf-drift-x-mid)), calc(-50% + var(--leaf-drift-y-mid))) rotate(var(--leaf-rotate-mid)) scale(0.92);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--leaf-drift-x)), calc(-50% + var(--leaf-drift-y))) rotate(var(--leaf-rotate-end)) scale(0.68);
+  }
+}
+
 @media (max-width: 1280px) {
   .sunlit-notes {
     grid-template-columns: minmax(0, 1fr) minmax(220px, 28vw);
@@ -750,6 +785,7 @@ body.sunlit-home {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .sunlit-cursor-leaf { display: none !important; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

@@ -109,4 +109,21 @@
 - The mobile menu opens visibly and reports `aria-expanded="true"`; the browser console reports no warnings or errors.
 - No unresolved P0, P1, or P2 visual or interaction issues remain.
 
+## Nature cursor trail — 2026-08-30
+
+- Baseline: `docs/qa/leaf-trail-before.png`, captured at 1280 × 720 with the pointer effect absent.
+- Implemented state: `docs/qa/leaf-trail-after.png`, captured at the same viewport after one continuous diagonal pointer path.
+- Same-input visual comparison confirms the trail remains legible across both the cream copy panel and the detailed road photograph without hiding navigation, buttons, or status content.
+
+### Trail findings and verification
+
+1. P2 — The initial density felt too sparse relative to the requested “group of leaves.” Increased the shape size and lifetime, shortened the distance/time emission gates, and allowed up to four interpolated leaves per movement while retaining a hard 48-element cap.
+2. P2 — A single repeated silhouette would look stamped. The final trail randomises four Font Awesome botanical silhouettes, five palette-matched olive/gold tones, scale, rotation, cross-path drift, fall distance, and duration.
+3. P1 — Cursor decoration must not block interaction or create persistent DOM growth. Every particle is `pointer-events: none`, removes itself after animation, and clears when the page is hidden; 44 leaves were active during the density capture and the count returned to 0 after expiry.
+4. P1 — Decorative motion must not affect users on touch devices or with motion sensitivity. Creation is skipped for coarse pointers and `prefers-reduced-motion`; CSS also force-hides any leaf particle under reduced motion.
+
+- Site-wide verification produced 8 active leaves on the Projects page after a short pointer path, confirming the shared layout script applies the effect beyond the homepage.
+- Browser console check returned no warnings or errors.
+- No unresolved P0, P1, or P2 issues remain.
+
 final result: passed

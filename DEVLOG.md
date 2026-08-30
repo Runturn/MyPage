@@ -1,5 +1,12 @@
 # Development Log
 
+## 2026-08-30 — Nature cursor trail
+
+- Added a site-wide mouse trail made from four Font Awesome botanical silhouettes rather than emoji or custom cursor artwork.
+- Varied leaf shape, scale, olive/gold tone, rotation, lateral drift, fall distance, and lifetime so the trail feels organic instead of stamped or repetitive.
+- Limited emission by pointer distance, time interval, and a 42-element cap; expired leaves remove themselves and clear when the page is hidden.
+- Disabled the effect for coarse pointers and `prefers-reduced-motion`, while keeping every leaf non-interactive and hidden from assistive technology.
+
 ## 2026-08-30 — Post-graduation information architecture
 
 - Updated the homepage status and About page to reflect University of Aizu graduation and joining BACS as a new graduate in June 2026, without inventing a job title or publishing workplace details beyond the requested public summary.
