@@ -307,14 +307,26 @@ body.sunlit-home {
   box-shadow: 0 2px 7px rgba(48, 58, 53, 0.12);
 }
 
+.sunlit-botanical-cursor.is-interactive {
+  background:
+    linear-gradient(rgba(184, 148, 62, 0.58), rgba(184, 148, 62, 0.58)) 50% 0 / 1px 3px no-repeat,
+    linear-gradient(rgba(184, 148, 62, 0.58), rgba(184, 148, 62, 0.58)) 50% 100% / 1px 3px no-repeat,
+    linear-gradient(rgba(184, 148, 62, 0.58), rgba(184, 148, 62, 0.58)) 0 50% / 3px 1px no-repeat,
+    linear-gradient(rgba(184, 148, 62, 0.58), rgba(184, 148, 62, 0.58)) 100% 50% / 3px 1px no-repeat;
+}
+
 .sunlit-botanical-cursor.is-interactive::after {
   background: var(--sunlit-gold);
   box-shadow: 0 0 0 3px rgba(184, 148, 62, 0.1);
-  transform: translate(-50%, -50%) scale(1.35);
+  transform: translate(-50%, -50%) scale(2.4);
 }
 
 .sunlit-botanical-cursor.is-pressed::before {
   transform: scale(0.76);
+}
+
+.sunlit-botanical-cursor.is-pressed::after {
+  transform: translate(-50%, -50%) scale(1.65);
 }
 
 @media (hover: hover) and (pointer: fine) {
