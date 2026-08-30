@@ -3,7 +3,7 @@
 ## 2026-08-31 — Clearer clickable cursor state
 
 - Kept the accepted compact olive-and-gold cursor palette and 18px base footprint.
-- Enlarged the inner gold dot from roughly 4px to 7.2px over links, buttons, cards, and preview routes so the clickable state remains legible on both cream and photographic backgrounds.
+- Enlarged the inner olive dot from roughly 4px to 7.2px over links, buttons, cards, and preview routes so the clickable state remains legible while preserving the same colour identity as the default cursor.
 - Added four restrained one-pixel directional ticks inspired by SHAN-VERSE's clickable cursor and a smaller pressed-dot state for immediate click feedback.
 
 ## 2026-08-31 — Lighter leaf trail

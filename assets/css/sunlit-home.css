@@ -316,8 +316,8 @@ body.sunlit-home {
 }
 
 .sunlit-botanical-cursor.is-interactive::after {
-  background: var(--sunlit-gold);
-  box-shadow: 0 0 0 3px rgba(184, 148, 62, 0.1);
+  background: var(--sunlit-green-dark);
+  box-shadow: 0 0 0 3px rgba(112, 136, 91, 0.12);
   transform: translate(-50%, -50%) scale(2.4);
 }
 

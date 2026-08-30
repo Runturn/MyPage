@@ -118,14 +118,14 @@
 
 ## Minimal botanical pointer — 2026-08-30
 
-- Interactive-state evidence: `docs/qa/botanical-cursor-after.png` at 1280 × 720, with the compact pointer over the primary About button, its inner gold dot enlarged, and four restrained directional ticks visible around the ring.
+- Interactive-state evidence: `docs/qa/botanical-cursor-after.png` at 1280 × 720, with the compact pointer over the primary About button, its inner olive dot enlarged, and four restrained gold directional ticks visible around the ring.
 - Default-state and trail evidence: `docs/qa/botanical-cursor-trail.png` at 1280 × 720, with the minimal olive-dot pointer over the road image and the lighter trail active along the movement path.
 - The page reports `data-botanical-cursor="active"`, mounts exactly one custom cursor, hides the native cursor, and toggles `is-interactive` over links and buttons.
 - The custom pointer is `aria-hidden`, `pointer-events: none`, and therefore cannot intercept clicks or enter the accessibility tree.
 - Homepage and Projects verification both produced one cursor instance and zero horizontal overflow; the existing leaf trail remains functional on the same pointer path.
 - Activation is guarded by `(hover: hover) and (pointer: fine)`, leaving touch/coarse-pointer devices on their native cursor path. Reduced-motion CSS collapses cursor transitions and the existing script skips leaf emission.
 - Density refinement on 2026-08-31 reduced the same five-point test path from 16 simultaneous leaves to 8; measured rendered sizes ranged from 7.1px to 12.7px, within the configured 7–13px range.
-- Clickable-state refinement on 2026-08-31 increased the effective inner dot from about 4.1px to 7.2px while retaining the 18px base footprint and 22px expanded ring; computed styles confirmed all four one-pixel tick gradients, `is-interactive`, `cursor: none`, and `pointer-events: none`.
+- Clickable-state refinement on 2026-08-31 increased the effective inner dot from about 4.1px to 7.2px while retaining the 18px base footprint and 22px expanded ring; default and interactive states both resolve to the same olive `rgb(84, 104, 66)`, while computed styles also confirmed all four one-pixel tick gradients, `is-interactive`, `cursor: none`, and `pointer-events: none`.
 
 ## Nature cursor trail — 2026-08-30
 
