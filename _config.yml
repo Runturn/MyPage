@@ -20,16 +20,11 @@ author: HE RUNTONG
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Friends: 
-    - Hui Shan: "https://huiishan99.github.io/web-blog/"
-    - Cai Ni: "http://ni-labs.com/"
-  Resources: 
-    - Dive into Deep Learning: "https://github.com/d2l-ai/d2l-zh/"
-    - CS-Books: "https://github.com/forthespada/CS-Books/"
-  Affiliation:
-    - University of Aizu: "https://u-aizu.ac.jp/"
-    - Lab Homepage: "https://sulab-sever.u-aizu.ac.jp/"
+  About: "aboutme"
+  Story: "story"
+  Notes: "notes"
+  Projects: "projects"
+  Connections: "connections"
     
   
 
@@ -92,7 +87,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Notes on learning, building, and cyber security by HE Runtong.
 
 ###########################
 # --- General options --- #
@@ -107,7 +102,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "HE Runtong"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -265,7 +260,7 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Asia/Tokyo"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -307,4 +302,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-

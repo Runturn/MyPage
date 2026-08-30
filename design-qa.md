@@ -85,4 +85,28 @@
 - At 1280px, moving the pointer over the left copy panel sets `--vine-x: -3.4px` and `--image-x: 4.2px`; moving it over the right image sets `--vine-x: 3.4px` and `--image-x: -4.2px`.
 - Browser console check returned no warnings or errors.
 
+## Post-graduation content architecture — 2026-08-30
+
+- Visual sources: `docs/qa/reference-shan-about.png`, `reference-shan-projects.png`, `reference-shan-blog.png`, and `reference-shan-timeline.png`, each captured from the matching SHAN-VERSE route at a 1280 × 720 viewport.
+- Matched implementation states: `postgrad-about-viewport.png`, `postgrad-projects-viewport.png`, `postgrad-notes-viewport.png`, and `postgrad-story-viewport.png` at the same viewport and initial page state.
+- Below-fold desktop evidence: `postgrad-projects-content-viewport.png`, `postgrad-story-content-viewport.png`, `postgrad-notes-content-viewport.png`, and `postgrad-connections-content-viewport.png`.
+- Responsive evidence: 390 × 844 captures for the Projects hero and publication content, About experience section, Story rail, Notes list, Connections cards, and open mobile menu.
+
+### Content-architecture findings and fixes
+
+1. P1 — The portfolio still described Runtong as a University of Aizu graduate student. Updated the homepage and About page to state graduation and joining BACS as a new graduate in June 2026, without inventing a role title.
+2. P2 — Journey, Research, Projects, Notes, and Friends mixed section anchors with an external link and had no coherent inner-page hierarchy. Replaced them with dedicated About, Story, Notes, Projects, and Connections routes.
+3. P2 — A SHAN-VERSE-style detailed timeline would disclose more personal detail than intended. Kept the year-led rail but limited it to broad education, fieldwork, research, community, graduation, and employment milestones; added an explicit privacy note.
+4. P2 — The previous Resources/Friends concepts did not distinguish relationships from generic bookmarks. Added a curated Connections grid, made Partner the first and visually accented card, and included only SHAN-VERSE, Su Laboratory, BACS, and the University of Aizu.
+5. P2 — The About page repeated portfolio sections instead of presenting a profile. Reorganised it into education, experience, research, skills, languages, and interests while maintaining the warm paper, olive, gold, serif, and straight-edged visual system.
+6. P2 — There was no true Notes index or publication index. Added a dynamic Jekyll Notes list and a Projects page with both Runtong-authored papers, accurate venue/status labels, publication links only where public, QuickScribe, and civil-engineering foundations.
+
+### Post-fix verification
+
+- Jekyll production build completes successfully with all six primary routes returning HTTP 200.
+- Matched source/implementation captures preserve SHAN-VERSE's structural ideas—profile hierarchy, category routes, year rail, and post list—while intentionally keeping Runtong's accepted warm-light design language.
+- Long publication titles, external-link controls, the privacy timeline, note cards, and connection cards remain contained at 1280 × 720 and 390 × 844.
+- The mobile menu opens visibly and reports `aria-expanded="true"`; the browser console reports no warnings or errors.
+- No unresolved P0, P1, or P2 visual or interaction issues remain.
+
 final result: passed

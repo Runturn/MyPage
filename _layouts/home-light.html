@@ -35,7 +35,7 @@ common-js:
             <i class="fa-solid fa-diamond" aria-hidden="true"></i>
             <span>About Me</span>
           </a>
-          <a class="sunlit-button sunlit-button-secondary" href="#notes">
+          <a class="sunlit-button sunlit-button-secondary" href="{{ '/notes' | relative_url }}">
             <i class="fa-solid fa-diamond" aria-hidden="true"></i>
             <span>Read Notes</span>
           </a>
@@ -50,13 +50,13 @@ common-js:
         >
 
         <div class="sunlit-status" data-enter="5" aria-label="Current focus">
-          <span class="sunlit-status-label">FOCUS</span>
+          <span class="sunlit-status-label">NOW</span>
+          <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
+          <span><i class="fa-solid fa-building" aria-hidden="true"></i>BACS</span>
+          <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
+          <span><i class="fa-solid fa-seedling" aria-hidden="true"></i>New Graduate · Jun 2026</span>
           <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
           <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Cyber Security</span>
-          <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
-          <span><i class="fa-solid fa-code" aria-hidden="true"></i>LLM Security</span>
-          <i class="fa-solid fa-diamond sunlit-status-divider" aria-hidden="true"></i>
-          <span><i class="fa-solid fa-network-wired" aria-hidden="true"></i>Network Security</span>
         </div>
       </div>
 
@@ -66,17 +66,17 @@ common-js:
       </figure>
     </section>
 
-    <section class="sunlit-notes" id="notes" aria-labelledby="notes-title">
+    <section class="sunlit-notes" id="explore" aria-labelledby="notes-title">
       <div class="sunlit-notes-content">
         <h2 id="notes-title" data-reveal>
-          <span>RECENT NOTES</span>
+          <span>EXPLORE</span>
           <i class="fa-solid fa-diamond" aria-hidden="true"></i>
         </h2>
 
         <div class="sunlit-note-list">
           <a
             class="sunlit-note-row"
-            href="{{ '/aboutme#journey' | relative_url }}"
+            href="{{ '/story' | relative_url }}"
             data-preview="{{ '/assets/img/runtong-construction-site.jpg' | relative_url }}"
             data-preview-alt="Runtong during a civil engineering site placement"
             data-reveal
@@ -89,7 +89,7 @@ common-js:
 
           <a
             class="sunlit-note-row"
-            href="{{ '/aboutme#research' | relative_url }}"
+            href="{{ '/projects#publications' | relative_url }}"
             data-preview="{{ '/assets/img/paper-vibe-coding.png' | relative_url }}"
             data-preview-alt="First page of the Vibe Coding security paper"
             data-reveal
@@ -102,7 +102,7 @@ common-js:
 
           <a
             class="sunlit-note-row"
-            href="{{ '/aboutme#projects' | relative_url }}"
+            href="{{ '/projects#built-work' | relative_url }}"
             data-preview="{{ '/assets/img/runtong-jphacks-2024.jpg' | relative_url }}"
             data-preview-alt="Runtong presenting QuickScribe at JPHACKS 2024"
             data-reveal

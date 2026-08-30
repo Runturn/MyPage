@@ -1,5 +1,13 @@
 # Development Log
 
+## 2026-08-30 — Post-graduation information architecture
+
+- Updated the homepage status and About page to reflect University of Aizu graduation and joining BACS as a new graduate in June 2026, without inventing a job title or publishing workplace details beyond the requested public summary.
+- Replaced the former Journey/Research/Friends navigation with separate Story, Notes, Projects, and Connections pages while preserving the warm editorial visual system across the full site.
+- Built a privacy-conscious timeline with broad milestones rather than precise personal dates, routines, or relationship history.
+- Added a dynamic Jekyll Notes index, a Projects page containing Runtong's ISPEC 2025 and ICICS 2026 papers plus QuickScribe, and a curated Connections page for SHAN-VERSE, Su Laboratory, BACS, and the University of Aizu.
+- Reframed About around education, experience, research, skills, languages, and interests, following the structural rhythm of SHAN-VERSE without copying its dark visual treatment.
+
 ## 2026-08-30 — Sunlit homepage redesign
 
 - Rebuilt the homepage around the selected warm editorial reference: cream paper texture, high-contrast serif typography, muted green controls, gold accents, a sunlit road hero, and a compact recent-notes section.

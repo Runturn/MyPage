@@ -1,118 +1,110 @@
 ---
 layout: page
 title: About
-kicker: THE LONG ROAD
-subtitle: From civil engineering to cyber security — learning how safer systems are built.
+kicker: IN BRIEF
+subtitle: A quiet builder, moving from physical structures toward safer digital systems.
 cover-img: /assets/img/runtong-graduation-aizu.jpg
 cover-alt: Runtong standing beside the University of Aizu graduation sign
-share-description: HE Runtong's journey from civil engineering to cyber security, research, projects, and community work.
+share-description: About HE Runtong — education, work, research interests, skills, and life beyond work.
 ---
 
 <section class="sunlit-about-intro">
-  <p class="sunlit-dropcap">I grew up in Shuangyashan, a city in northeastern China. My path first led me to civil engineering in Wuhan, then to construction sites, and eventually to computer science in Aizuwakamatsu. The subject changed, but the question stayed with me: how do we build systems people can trust?</p>
+  <p class="sunlit-dropcap">I began in civil engineering, where every decision had to meet the realities of safety, schedule, and people. Computer science gave me a different kind of structure to build. After completing graduate study at the University of Aizu, I joined BACS in June 2026 as a new graduate and began the next part of that work.</p>
 
   <dl class="sunlit-facts" aria-label="Profile at a glance">
-    <div><dt>Background</dt><dd>Civil Engineering → Computer Science</dd></div>
-    <div><dt>Specialty</dt><dd>Cyber Security</dd></div>
-    <div><dt>Interests</dt><dd>LLM Security · Network Security</dd></div>
+    <div><dt>Now</dt><dd>BACS · New Graduate 2026</dd></div>
+    <div><dt>Education</dt><dd>University of Aizu</dd></div>
+    <div><dt>Focus</dt><dd>Cyber Security · Software Systems</dd></div>
     <div><dt>Languages</dt><dd>Chinese · English · Japanese</dd></div>
   </dl>
 </section>
 
-<section class="sunlit-story-section" id="journey">
+<section class="sunlit-story-section" id="education">
   <header class="sunlit-section-heading">
     <span>01</span>
-    <div><p>JOURNEY</p><h2>From structures to systems</h2></div>
+    <div><p>EDUCATION</p><h2>Two disciplines, one habit of care</h2></div>
   </header>
 
-  <div class="sunlit-story-grid">
-    <figure class="sunlit-story-image">
-      <img src="{{ '/assets/img/runtong-construction-site.jpg' | relative_url }}" alt="Runtong wearing a safety helmet at a construction site">
-      <figcaption>Learning responsibility on site, 2021–2022</figcaption>
-    </figure>
+  <div class="sunlit-profile-columns">
+    <article class="sunlit-profile-block">
+      <p class="sunlit-eyebrow">WUHAN UNIVERSITY OF SCIENCE AND TECHNOLOGY</p>
+      <h3>Civil Engineering</h3>
+      <p>My undergraduate work covered construction planning, resources, quality, and safety. The discipline taught me to see a project as a connected system rather than a collection of isolated tasks.</p>
+    </article>
+    <article class="sunlit-profile-block">
+      <p class="sunlit-eyebrow">UNIVERSITY OF AIZU · GRADUATED 2026</p>
+      <h3>Computer Science and Engineering</h3>
+      <p>Graduate study shifted my attention toward cyber security, including the security of LLM-generated code and cost-aware network intrusion detection.</p>
+    </article>
+  </div>
+</section>
 
-    <div class="sunlit-timeline">
-      <article>
-        <time>Wuhan</time>
-        <h3>Civil Engineering</h3>
-        <p>At Wuhan University of Science and Technology, I studied how a complex project becomes a safe, workable plan. My thesis designed the construction organization for a 6.54-kilometre urban expressway, bringing schedule, resources, quality, and safety into one system.</p>
-      </article>
-      <article>
-        <time>2021–2022</time>
-        <h3>Learning on site</h3>
-        <p>Placements and site-supervision work with China State Construction taught me to respect procedures, communicate across teams, and take responsibility for details that affect other people.</p>
-      </article>
-      <article>
-        <time>Aizuwakamatsu</time>
-        <h3>Computer Science</h3>
-        <p>Graduate study at the University of Aizu gave me a new material to work with: software. I moved toward cyber security, especially the ways large language models and network systems can fail — and how we can test them more carefully.</p>
-      </article>
-    </div>
+<section class="sunlit-story-section" id="experience">
+  <header class="sunlit-section-heading">
+    <span>02</span>
+    <div><p>EXPERIENCE</p><h2>Learning by entering the real system</h2></div>
+  </header>
+
+  <div class="sunlit-experience-list">
+    <article>
+      <time>Since Jun 2026</time>
+      <div>
+        <p class="sunlit-eyebrow">BACS · バックス情報システム株式会社</p>
+        <h3>New Graduate</h3>
+        <p>I joined BACS after graduation. This page keeps the description intentionally broad while I learn the work, the team, and the responsibilities that come with professional systems development.</p>
+        <a class="sunlit-text-link" href="https://www.bacs-j.co.jp/" target="_blank" rel="noopener noreferrer">Visit BACS <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      </div>
+    </article>
+    <article>
+      <time>2021–2022</time>
+      <div>
+        <p class="sunlit-eyebrow">CONSTRUCTION PLACEMENTS</p>
+        <h3>Site work and supervision</h3>
+        <p>Field placements taught me to follow procedures, communicate across teams, and take responsibility for details that affect other people.</p>
+      </div>
+    </article>
   </div>
 </section>
 
 <section class="sunlit-story-section" id="research">
   <header class="sunlit-section-heading">
-    <span>02</span>
+    <span>03</span>
     <div><p>RESEARCH</p><h2>Security should be tested, not assumed</h2></div>
   </header>
 
-  <div class="sunlit-feature-card">
-    <div class="sunlit-feature-copy">
-      <p class="sunlit-eyebrow">ISPEC 2025 · ACCEPTED PAPER</p>
-      <h3>Assessing the Security of Vibe Coding</h3>
-      <p>The study compared baseline prompts with security-oriented prompts across Python tasks mapped to OWASP Top 10 and CWE categories. Static analysis and runtime probes showed that better prompting can reduce vulnerabilities, but cannot replace verification or secure engineering practice.</p>
-      <p class="sunlit-paper-title">“Assessing the Security of Vibe Coding: Baseline vs. Security-Oriented Prompts in LLM Code Generation”</p>
-    </div>
-    <figure class="sunlit-paper-preview">
-      <img src="{{ '/assets/img/paper-vibe-coding.png' | relative_url }}" alt="First page of the Vibe Coding security paper">
-    </figure>
+  <div class="sunlit-profile-columns">
+    <article class="sunlit-profile-block">
+      <p class="sunlit-eyebrow">LLM CODE SECURITY</p>
+      <h3>Safer prompting is a start, not a guarantee</h3>
+      <p>My published work studies whether security-oriented prompts reduce vulnerabilities in generated Python code. The results support careful prompting while keeping verification at the centre of secure engineering.</p>
+    </article>
+    <article class="sunlit-profile-block">
+      <p class="sunlit-eyebrow">NETWORK SECURITY</p>
+      <h3>Escalate uncertainty efficiently</h3>
+      <p>My collaborative intrusion-detection work explores a confidence-gated pipeline that gives ambiguous traffic extra scrutiny while keeping primary decisions separate from LLM-generated audit rationales.</p>
+    </article>
   </div>
-
-  <div class="sunlit-research-note">
-    <p class="sunlit-eyebrow">COLLABORATIVE RESEARCH</p>
-    <h3>Cost-aware network intrusion detection</h3>
-    <p>I also supported experiments and model-metric confirmation for a confidence-gated two-stage intrusion-detection study. The design sends uncertain cases from a fast LSTM path to a lightweight verifier, reserving language models for audit and explanation rather than packet classification.</p>
-  </div>
+  <a class="sunlit-button sunlit-button-secondary sunlit-inline-button" href="{{ '/projects#publications' | relative_url }}">Read the publications <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 </section>
 
-<section class="sunlit-story-section" id="projects">
-  <header class="sunlit-section-heading">
-    <span>03</span>
-    <div><p>PROJECTS</p><h2>Ideas become clearer when they are built</h2></div>
-  </header>
-
-  <div class="sunlit-project-card">
-    <figure>
-      <img src="{{ '/assets/img/runtong-jphacks-2024.jpg' | relative_url }}" alt="Runtong presenting QuickScribe at JPHACKS 2024">
-      <figcaption>JPHACKS 2024, Sendai</figcaption>
-    </figure>
-    <div>
-      <p class="sunlit-eyebrow">AUDIENCE VOTE · 3RD PLACE</p>
-      <h3>QuickScribe</h3>
-      <p>QuickScribe turns handwritten mathematical expressions into structured digital notation with Gemini 1.5 Flash and MathJax. During the hackathon, I worked on backend development, frontend API integration, and the final presentation.</p>
-      <a class="sunlit-text-link" href="https://github.com/jphacks/sd_2404">View the project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </div>
-  </div>
-</section>
-
-<section class="sunlit-story-section sunlit-community-section" id="community">
+<section class="sunlit-story-section" id="skills">
   <header class="sunlit-section-heading">
     <span>04</span>
-    <div><p>COMMUNITY</p><h2>Make the room easier to enter</h2></div>
+    <div><p>SKILLS</p><h2>A practical working set</h2></div>
   </header>
 
-  <div class="sunlit-community-copy">
-    <p>As vice president and later president of the University of Aizu Chinese Students Association, I helped welcome new students, coordinate events, and keep communication moving across different backgrounds. It taught me that quiet operational work can be a form of care.</p>
-    <blockquote>Build steadily. Speak clearly. Leave things a little easier for the next person.</blockquote>
+  <div class="sunlit-skill-groups">
+    <article><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Build</h3><p>Python · Web APIs · Frontend–backend integration · Prototyping</p></article>
+    <article><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><h3>Study</h3><p>Static analysis · Runtime probes · Security evaluation · Network intrusion detection</p></article>
+    <article><i class="fa-solid fa-people-group" aria-hidden="true"></i><h3>Collaborate</h3><p>Presentations · Event coordination · Cross-cultural communication · Team delivery</p></article>
   </div>
 </section>
 
 <section class="sunlit-closing-note">
   <img src="{{ '/assets/img/botanical-vine.png' | relative_url }}" alt="" aria-hidden="true">
   <div>
-    <p class="sunlit-eyebrow">OFF THE CLOCK</p>
+    <p class="sunlit-eyebrow">BEYOND WORK</p>
     <h2>History, world affairs, and the long view</h2>
-    <p>I read history and follow global news and economics. They remind me that technical systems never exist alone: they grow inside institutions, incentives, and human decisions.</p>
+    <p>I read history and follow global news and economics. They are reminders that technical systems never exist alone: they grow inside institutions, incentives, and human decisions.</p>
   </div>
 </section>
