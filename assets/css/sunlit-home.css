@@ -256,8 +256,8 @@ body.sunlit-home {
   z-index: 100000;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   color: var(--sunlit-green-dark);
   pointer-events: none;
   user-select: none;
@@ -268,42 +268,32 @@ body.sunlit-home {
 }
 
 .sunlit-botanical-cursor::before,
-.sunlit-botanical-cursor::after,
-.sunlit-botanical-cursor i {
+.sunlit-botanical-cursor::after {
   position: absolute;
   pointer-events: none;
 }
 
 .sunlit-botanical-cursor::before {
   content: "";
-  inset: 2px;
-  border: 1px solid rgba(184, 148, 62, 0.68);
-  border-radius: 72% 22% 70% 26% / 70% 24% 72% 22%;
-  background: rgba(251, 249, 242, 0.54);
-  box-shadow: 0 2px 8px rgba(48, 58, 53, 0.14), inset 0 0 0 3px rgba(112, 136, 91, 0.08);
-  transform: rotate(43deg);
-  transition: inset 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  inset: 4px;
+  border: 1px solid rgba(184, 148, 62, 0.72);
+  border-radius: 50%;
+  background: rgba(251, 249, 242, 0.28);
+  box-shadow: 0 1px 4px rgba(48, 58, 53, 0.1);
+  transition: inset 150ms ease, border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
 .sunlit-botanical-cursor::after {
   content: "";
-  right: 1px;
-  bottom: 3px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--sunlit-gold);
-  box-shadow: 0 0 0 3px rgba(184, 148, 62, 0.14);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.sunlit-botanical-cursor i {
   top: 50%;
   left: 50%;
-  font-size: 13px;
-  line-height: 1;
-  transform: translate(-50%, -54%) rotate(-18deg);
-  transition: color 180ms ease, transform 180ms ease;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sunlit-green-dark);
+  box-shadow: 0 0 0 2px rgba(112, 136, 91, 0.1);
+  transform: translate(-50%, -50%);
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
 .sunlit-botanical-cursor.is-visible {
@@ -311,30 +301,20 @@ body.sunlit-home {
 }
 
 .sunlit-botanical-cursor.is-interactive::before {
-  inset: -3px;
-  border-radius: 50%;
+  inset: -2px;
   border-color: rgba(184, 148, 62, 0.92);
-  background: rgba(248, 242, 219, 0.82);
-  box-shadow: 0 3px 12px rgba(48, 58, 53, 0.18), inset 0 0 0 4px rgba(184, 148, 62, 0.1);
-  transform: rotate(9deg) scale(1.04);
+  background: rgba(248, 242, 219, 0.32);
+  box-shadow: 0 2px 7px rgba(48, 58, 53, 0.12);
 }
 
 .sunlit-botanical-cursor.is-interactive::after {
-  transform: scale(1.35);
-  box-shadow: 0 0 0 5px rgba(184, 148, 62, 0.12);
-}
-
-.sunlit-botanical-cursor.is-interactive i {
-  color: var(--sunlit-green);
-  transform: translate(-50%, -54%) rotate(4deg) scale(1.22);
+  background: var(--sunlit-gold);
+  box-shadow: 0 0 0 3px rgba(184, 148, 62, 0.1);
+  transform: translate(-50%, -50%) scale(1.35);
 }
 
 .sunlit-botanical-cursor.is-pressed::before {
-  transform: rotate(9deg) scale(0.82);
-}
-
-.sunlit-botanical-cursor.is-pressed i {
-  transform: translate(-50%, -54%) rotate(4deg) scale(0.92);
+  transform: scale(0.76);
 }
 
 @media (hover: hover) and (pointer: fine) {

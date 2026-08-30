@@ -19,13 +19,10 @@
     if (!finePointer.matches) return;
 
     var cursor = document.createElement("span");
-    var cursorIcon = document.createElement("i");
     var interactiveSelector = "a, button, [role='button'], input[type='button'], input[type='submit'], summary, label[for]";
 
     cursor.className = "sunlit-botanical-cursor";
     cursor.setAttribute("aria-hidden", "true");
-    cursorIcon.className = "fa-solid fa-seedling";
-    cursor.appendChild(cursorIcon);
     body.appendChild(cursor);
     root.dataset.botanicalCursor = "active";
 

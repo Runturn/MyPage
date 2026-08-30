@@ -1,10 +1,10 @@
 # Development Log
 
-## 2026-08-30 — Botanical custom pointer
+## 2026-08-30 — Minimal botanical pointer
 
-- Replaced the operating-system arrow on fine-pointer devices with a site-owned botanical cursor: an olive seedling inside an asymmetric leaf-shaped cream-and-gold badge.
-- Added a larger circular bloom state for links and buttons plus a compact pressed state, while keeping the click hotspot centred and the cursor responsive without smoothing lag.
-- Kept the existing varied-leaf trail, so the persistent pointer and the temporary particles now read as one interaction system rather than two unrelated effects.
+- Replaced the operating-system arrow on fine-pointer devices with a compact olive dot and thin gold ring, following SHAN-VERSE's restrained cursor scale without copying its star particles.
+- Added only a subtle ring expansion and gold-dot change for links and buttons plus a compact pressed state, keeping the click hotspot centred and responsive without smoothing lag.
+- Kept the existing varied-leaf trail as the nature-specific expression, allowing the persistent pointer itself to remain quiet and precise.
 - Activates only after the custom cursor is mounted and only for devices reporting both hover and a fine pointer; touch/coarse-pointer devices retain their native behavior.
 - Kept the cursor non-interactive and hidden from assistive technology, with reduced-motion rules collapsing its decorative transitions and disabling the leaf trail.
 
