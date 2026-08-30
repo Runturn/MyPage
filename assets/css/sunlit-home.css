@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
@@ -342,6 +343,7 @@ body.sunlit-home {
   grid-template-columns: minmax(0, 1fr) 343px;
   gap: 48px;
   background-color: rgba(250, 248, 241, 0.9);
+  overflow: hidden;
 }
 
 .sunlit-notes h2 {
@@ -506,7 +508,12 @@ body.sunlit-home {
   to { rotate: 1.1deg; }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
+  .sunlit-notes {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 28vw);
+    gap: clamp(24px, 3vw, 40px);
+  }
+
   .sunlit-status {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -518,8 +525,42 @@ body.sunlit-home {
   }
 
   .sunlit-note-row {
-    grid-template-columns: minmax(220px, 1.1fr) minmax(260px, 1.6fr) 100px 16px;
-    gap: 16px;
+    min-height: 76px;
+    padding: 12px 0;
+    grid-template-columns: minmax(0, 1fr) max-content 16px;
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    row-gap: 4px;
+  }
+
+  .sunlit-note-row strong {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .sunlit-note-row span {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .sunlit-note-row time {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .sunlit-note-row > i {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .sunlit-preview-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 278 / 202;
+  }
+
+  .sunlit-vine-notes {
+    right: -38px;
   }
 }
 

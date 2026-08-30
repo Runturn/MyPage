@@ -7,3 +7,7 @@
 - Added a project-local transparent botanical illustration for the hero and notes decoration.
 - Added restrained motion: staged page entrance, image and vine parallax, scroll reveals, mobile navigation, button and note-row states, and hover/focus-driven note preview changes.
 - Kept reduced-motion behavior and keyboard focus as first-class accessibility paths.
+
+### Responsive follow-up
+
+- Reflowed Recent Notes into a two-row tablet layout before its preview image can squeeze the text columns, then preserved the existing single-column mobile layout below 900px.
